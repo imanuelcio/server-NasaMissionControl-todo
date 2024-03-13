@@ -20,10 +20,7 @@ function httpAddNewLaunch(req, res) {
     !launch.target
   ) {
     return res.status(400).json({
-      status: 400,
-      message: {
-        error: "Missing required launch property",
-      },
+      error: "Missing required launch property",
     });
   }
   if (isNaN(launch.launchDate)) {
