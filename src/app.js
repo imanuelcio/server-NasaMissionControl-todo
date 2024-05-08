@@ -15,6 +15,13 @@ app.use(
 );
 app.use(morgan("combined"));
 
+app.get("/getUser", (req, res) => {
+  res.status(200).json({
+    message: "success",
+    status: 200,
+  });
+});
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "..", "public")));
 app.use("/planets", planetsRouter);
