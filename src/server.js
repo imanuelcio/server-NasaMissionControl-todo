@@ -5,7 +5,7 @@ const { loadPlanetsData } = require("./models/planets.model");
 const mongoose = require("mongoose");
 
 app.get("/getuser", (req, res) => {
-  res.json({
+  res.status(200).send({
     message: "Hello World",
   });
 });

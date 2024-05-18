@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const lauchSchema = new mongoose.Schema({
   flightNumber: {
-    type: number,
+    type: Number,
     required: true,
   },
   model: {
